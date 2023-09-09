@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM</title>
+  </head>
+  <body>
+    <button>9a</button>
+    <p>
+      <button class="js-button"></button>
+    </p>
+
+    <button
+      onclick="
+    
+    document.querySelector('.js-heads')
+    .innerHTML= 'You chose: heads'
+    "
+    >
+      Heads
+    </button>
+
+    <button
+      onclick="
+     document.querySelector('.js-heads')
+    .innerHTML= 'You chose: tails'
+    "
+    >
+      tails
+    </button>
+    <p class="js-heads"></p>
+
+    <input
+      placeholder="Name"
+      class="js-click"
+      onkeydown="handleSubmit(event)"
+    />
+
+    <button
+      onclick="
+    myName()
+    "
+    >
+      Submit
+    </button>
+
+    <p class="js-name"></p>
+  </body>
+  <script>
+    // console.log(document.querySelector("button"));
+    //document.querySelector(".js-button").innerHTML = "9b done!";
+    function handleSubmit(event) {
+      if (event.key === "Enter") {
+        myName();
+      }
+    }
+
+    function myName() {
+      let name = document.querySelector(".js-click");
+      let nameElement = name.value;
+      document.querySelector(
+        ".js-name"
+      ).innerHTML = ` Your name is: ${nameElement}`;
+    }
+    /*function headCount() {
+      let headElement = document.querySelector(".js-heads");
+      if (headElement.innerText === "You chose: tails") {
+        headElement.innerHTML = "You chose: heads";
+
+      } else {
+        headElement.innerHTML = "You chose: tails";
+      }
+    }*/
+
+    /*console.log(document.title);
+    document.title = "changed";
+
+    console.log(document.body);
+*/
+    //document.body.innerHTML ='helllo'
+    //document.title = 'Good job'
+  </script>
+</html>

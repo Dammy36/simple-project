@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    .cart-button {
+      background-color: rgb(255, 216, 20);
+      color: black;
+      padding: 10px 50px;
+      font-size: 14px;
+      border: none;
+      border-radius: 50px;
+    }
+    .request-button {
+      border: 1px solid black;
+      background-color: black;
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 4px;
+      font-size: 14px;
+      margin-left: 20px;
+    }
+    .schedule-button,
+    .js-taggole {
+      margin-left: 20px;
+      border: none;
+      padding: 10px 20px;
+      background-color: rgb(230, 230, 230);
+      font-size: 14px;
+      border-radius: 3px;
+      margin-top: 50px;
+    }
+
+    .is-toggled {
+      background-color: black;
+      color: #fff;
+    }
+  </style>
+  <body>
+    <button class="cart-button">Add to Carts</button>
+    <button class="request-button">Request Now</button>
+    <button class="schedule-button">schedule for later</button>
+
+    <button
+      onclick="
+gamingButton('.js-gaming')
+    "
+      class="js-taggole js-gaming"
+    >
+      Gaming
+    </button>
+    <button
+      onclick="
+gamingButton( '.js-gaming-2')
+"
+      class="js-taggole js-gaming-2"
+    >
+      Music
+    </button>
+
+    <button
+      onclick="
+gamingButton('.js-gaming-3')
+"
+      class="js-taggole js-gaming-3"
+    >
+      Tech
+    </button>
+  </body>
+  <script>
+    // let element = document.querySelector(".js-button");
+    //element.classList.contains("js-button");
+    //console.log(element);
+
+    function gamingButton(selector) {
+      let buttonElement = document.querySelector(selector);
+
+      if (!buttonElement.classList.contains("is-toggled")) {
+        turnOffPreviousButton();
+        buttonElement.classList.add("is-toggled");
+      } else {
+        buttonElement.classList.remove("is-toggled");
+      }
+    }
+
+    function turnOffPreviousButton() {
+      let previousButton = document.querySelector(".is-toggled");
+      if (previousButton) {
+        previousButton.classList.remove("is-toggled");
+      }
+    }
+
+    /*let a = "red";
+    let b = "green";
+    let c = a;
+    a = b;
+    b = c;
+    console.log(a);
+     console.log(b)*/
+
+    let hour = 13;
+    if (hour >= 6 && hour < 12) console.log("good mornig");
+    else if (hour >= 12 && hour < 18) console.log("good afternoon");
+    else {
+      console.log("good evening");
+    }
+  </script>
+</html>

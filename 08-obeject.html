@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Obect</title>
+  </head>
+  <body></body>
+  <script>
+    /* const product = {
+              name: "socks",
+              price: 1090,
+            };
+            console.log(product);
+            console.log(product.name)
+             console.log(product.price)
+
+             product.name = 'cotton.socks'
+             console.log(product)
+
+        //to add a value in an object
+        product.newProperty = true
+        console.log (product)
+
+        //to delete
+        delete product.newProperty
+        console.log(product)
+
+
+        // Nested object
+
+            const product2 = {
+                name: 'shirt',
+               [ 'delivery-time']: '1 day',
+                rating:{
+                    stars:4.5,
+                    count:87
+                },
+
+                fun: function(){
+        console.log('function inside object')
+                }
+            };
+            console.log(product2);
+            console.consolelog(product2.name);
+                console.log(product2["name"]);
+                console.log (product2['delivery-time'])
+                console.log(product2.rating.count)
+                product2.fun()
+
+                JSON.stringify(product2)
+                */
+    /* const Product = {
+      name: "basketball",
+      price: 2095,
+    };
+    console.log(Product.name);
+    console.log(Product.price);
+
+    Product["delivery-time"] = "3days";
+
+    Product.price += 500;
+    console.log(Product);
+
+    function comparePrice(product1, product2) {
+      if (product1.price < product2.price) {
+        return product1;
+      } else {
+        return Product2;
+      }
+    }
+    const product1 = {
+      name: "basketball",
+      price: 1050,
+    };
+
+    const product2 = {
+      name: "ball",
+      price: 2020,
+    };
+
+    console.log(comparePrice(product1, product2));
+*/
+    function isSameProduct(item1, item2) {
+      if (item1.name === item2.name && item1.price === item2.price) {
+        return true;
+      } else {
+        return false;
+      }
+    }
+    let item1 = {
+      name: "ball",
+      price: 2020,
+    };
+    let item2 = {
+      name: "basketball",
+      price: 1940,
+    };
+
+    let item3 = {
+      name: "ball",
+      price: 2020,
+    };
+
+    console.log(isSameProduct(item1, item2));
+    console.log(isSameProduct(item1, item3));
+  </script>
+</html>
