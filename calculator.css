@@ -1,0 +1,30 @@
+body {
+  background-color: black;
+  color: white;
+  font-weight: bold;
+  margin: 20px;
+}
+
+.calculator-css,
+.calculator-css-2,
+.calculator-clear {
+  border: none;
+  padding: 8px 20px;
+  border-radius: 50px;
+  height: 60px;
+  width: 60px;
+  background-color: #333333;
+  color: white;
+  font-size: 20px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+.calculator-css-2 {
+  background-color: #fea00a;
+}
+.calculator-clear {
+  font-size: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
